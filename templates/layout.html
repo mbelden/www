@@ -2,9 +2,14 @@
 <html>
   <head>
     <title>MGB</title>    
-    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"></strong>
+    <strong>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+        <script src="static/js/script.js"></script>
+    </strong>
   </head>
   <body>
+    <div id="page">
     <header>
       <div class="container">
         <h1 class="logo">Michael G. Belden</h1>
@@ -17,10 +22,17 @@
         </nav></strong>
       </div>
     </header>
-     
-    <div class="container">
+    <div class="container" style="padding:0">
+      <h6><i>Jack of all trades, master of some. I like to write about techy things and tinker with webby things.</i></h6>
+    </div>
+    <div class="container" id="main">
       {% block content %}
       {% endblock %}
     </div>
+
+     <div id="footer"> 
+      &copy; MGB 2014
+     </div>
+   </div>
   </body>
 </html>
